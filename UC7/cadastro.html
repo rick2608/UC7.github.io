@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+
+    <div class="esquerda">
+
+        <p><a href="index.html"> <- Voltar</a></p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h3>Junte-se à nossa comunidade</h3>
+                <p>Milhares de desenvolvedores já estão publicando seus protótipos e crescendo conosco</p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <p>&copy;2026 DevFinder. Todos os direitos reservados</p>
+
+    </div>
+
+    <div class="direita">
+
+        <div class="cadastro">
+
+            <h3>Criar Conta</h3>
+            <p>Comece gratuitamente hoje</p>
+            <p>Nome Completo</p>
+            <input type="text">
+            <p>Email</p>
+            <input type="text">
+            <p>Senha</p>
+            <input type="password">
+
+            <p>Tipo de conta</p>
+
+            <label class="botao-bolinha">
+                <input type="checkbox" id="check1" onchange="abrirPagina()">
+                <span class="bolinha"></span>
+                <span>👤 Cliente</span>
+            </label>
+
+            <br>
+
+            <label class="botao-bolinha">
+                <input type="checkbox" id="check2" onchange="abrirPagina()">
+                <span class="bolinha"></span>
+                <span>❮❯ Desenvolvedor</span>
+            </label>
+
+            <br>
+
+            <button id="btnContinuar" onclick="irParaPagina()">Criar Conta Grátis</button>
+
+            <p>
+                Já tem conta?
+                <a href="login.html">Faça Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="js/cadastro.js"></script>
+
+</html>
