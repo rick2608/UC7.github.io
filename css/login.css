@@ -1,116 +1,575 @@
-a{
+:root {
+    --gray-50: #f9fafb;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
 
-    text-decoration: none;
-    color: blue;
+    --indigo: #4f46e5;
+    --purple: #9333ea;
+}
 
+* {
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
 
-    width: 100%;
-    height: 100%;
-    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
+    background: var(--gray-50);
+
+    color: var(--gray-900);
 }
 
-.esquerda {
+a {
+    text-decoration: none;
+}
 
-    color: white;
-    background: linear-gradient(to bottom, #4f46e5, #d946ef);
-    height: 100%;
-    width: 50%;
+
+/* Página */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+
+/* Esquerda */
+
+.auth-left {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 30px 50px;
+
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    justify-content: center;
 
-}
-
-.esquerda a {
+    background: linear-gradient(
+        145deg,
+        #4338ca,
+        #4f46e5 45%,
+        #9333ea
+    );
 
     color: white;
 
+    overflow: hidden;
 }
 
-.direita {
+.auth-left::before {
+    content: "";
 
-    height: 914px;
-    width: 50%;
-    display: flex;
-    color: black;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    position: absolute;
 
-}
+    width: 420px;
+    height: 420px;
 
-input {
-
-    background-color: rgb(231, 231, 231);
-
-}
-
-.botao-bolinha {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    font-family: sans-serif;
-    height: 40px;
-    background-color: rgb(231, 231, 231);
-    border-radius: 5px;
-}
-
-/* Esconde o checkbox padrão do navegador */
-.botao-bolinha input {
-    display: none;
-}
-
-/* Cria a bolinha personalizada */
-.bolinha {
-    width: 24px;
-    height: 24px;
     border-radius: 50%;
-    border: 2px solid #666;
-    background-color: #fff;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    top: -180px;
+    right: -180px;
+}
+
+.auth-left::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    bottom: -150px;
+    left: -100px;
+}
+
+
+.voltar {
+    position: relative;
+    z-index: 2;
+
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 14px;
+    font-weight: 600;
+
     transition: 0.2s;
 }
 
-/* Altera a cor e adiciona o preenchimento quando clicado */
-.botao-bolinha input:checked~.bolinha {
-    background-color: #007bff;
-    border-color: #007bff;
-    box-shadow: inset 0 0 0 4px #fff;
-    /* Cria o efeito de "bolinha marcada" */
+.voltar:hover {
+    color: white;
+
+    transform: translateX(-3px);
 }
 
-.cadastro {
+
+/* Conteúdo */
+
+.left-content {
+    position: relative;
+    z-index: 2;
+
+    margin: auto 0;
+
+    max-width: 470px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, 0.15);
 
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    border: 1px solid rgb(230, 205, 205);
-    padding: 20px;
-    border-radius: 20px;
-    height: 350px;
-    width: 250px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
 
+    backdrop-filter: blur(10px);
 }
 
-button {
+.brand-icon svg {
+    width: 21px;
+    height: 21px;
+
+    fill: white;
+}
+
+.left-content h1 {
+    margin: 0 0 18px;
+
+    font-size: 38px;
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+.left-content > p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Benefícios */
+
+.benefits {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.benefits div {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.benefit-icon {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 13px;
+}
+
+
+.copyright {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+}
+
+
+/* Direita */
+
+.auth-right {
+    min-height: 100vh;
+
+    padding: 40px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+}
+
+
+/* Card */
+
+.form-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+
+/* Header */
+
+.form-header {
+    margin-bottom: 32px;
+}
+
+.form-header h2 {
+    margin: 0 0 7px;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.form-header p {
+    margin: 0;
+
+    color: var(--gray-500);
+
+    font-size: 14px;
+}
+
+
+.mobile-logo {
+    display: none;
+}
+
+
+/* Campo */
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--gray-700);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.campo input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--gray-300);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: var(--gray-900);
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.campo input::placeholder {
+    color: var(--gray-400);
+}
+
+.campo input:focus {
+    border-color: var(--indigo);
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* Label + esqueci senha */
+
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.label-row label {
+    margin-bottom: 8px;
+}
+
+.esqueceu {
+    margin-bottom: 8px;
+
+    color: var(--indigo);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.esqueceu:hover {
+    text-decoration: underline;
+}
+
+
+/* Senha */
+
+.senha-container {
+    position: relative;
+}
+
+.senha-container input {
+    padding-right: 75px;
+}
+
+.mostrar-senha {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    color: var(--indigo);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* Botão */
+
+.btn-entrar {
+    width: 100%;
+    height: 48px;
+
+    margin-top: 4px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        90deg,
+        var(--indigo),
+        var(--purple)
+    );
 
     color: white;
-    background: linear-gradient(90deg, #4f46e5, #d946ef);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+
     cursor: pointer;
 
+    transition: 0.2s;
 }
 
-.cor {
+.btn-entrar:hover {
+    transform: translateY(-1px);
 
-    color: blue;
+    box-shadow:
+        0 8px 20px rgba(79, 70, 229, 0.25);
+}
 
+.btn-entrar:active {
+    transform: translateY(0);
+}
+
+
+/* Cadastro */
+
+.cadastro-text {
+    margin: 22px 0 0;
+
+    text-align: center;
+
+    color: var(--gray-500);
+
+    font-size: 13px;
+}
+
+.cadastro-text a {
+    color: var(--indigo);
+
+    font-weight: 700;
+}
+
+.cadastro-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsivo */
+
+@media (max-width: 850px) {
+
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-left {
+        display: none;
+    }
+
+    .auth-right {
+        min-height: 100vh;
+
+        padding: 30px 20px;
+    }
+
+    .mobile-logo {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 9px;
+
+        margin-bottom: 28px;
+
+        color: var(--purple);
+
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    .mobile-logo .brand-icon {
+        width: 34px;
+        height: 34px;
+
+        background: linear-gradient(
+            135deg,
+            var(--indigo),
+            var(--purple)
+        );
+    }
+
+    .mobile-logo .brand-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .form-header {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .auth-right {
+        padding: 25px 18px;
+    }
+
+    .form-header h2 {
+        font-size: 24px;
+    }
+
+    .label-row {
+        align-items: flex-start;
+    }
+}
+
+.erro {
+    display: block;
+    margin-top: 6px;
+
+    color: #dc2626;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.input-erro {
+    border-color: #ef4444 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.senha-forca {
+    margin-top: 7px;
+}
+
+.forca-barra {
+    width: 100%;
+    height: 4px;
+
+    background: #e5e7eb;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+.forca-barra span {
+    display: block;
+
+    width: 0%;
+    height: 100%;
+
+    background: #4f46e5;
+
+    border-radius: inherit;
+
+    transition: 0.3s;
+}
+
+.senha-forca small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #9ca3af;
+
+    font-size: 10px;
 }
