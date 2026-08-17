@@ -8,7 +8,7 @@ function abrirPagina() {
 
     if (document.getElementById("check2").checked) {
         document.getElementById("check1").checked = false;
-        destino = "planos.html";
+        destino = "desenvolvedor.html";
     }
 }
 
