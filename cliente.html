@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Protótipos</title>
+  <link rel="stylesheet" href="css/cliente.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+          </svg>
+        </div>
+        <span class="logo-text">Galeria de Protótipos</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn-primary">Cadastrar</button>
+        <a href="#" class="link-logout">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Sair
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Descubra Protótipos Incríveis</h1>
+    <p>Navegue por centenas de protótipos criados por desenvolvedores talentosos</p>
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input class="search-input" type="text" placeholder="Buscar protótipos...">
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="grid">
+
+      <!-- App de Delivery -->
+      <div class="card">
+        <div class="card-banner b-delivery">
+          <div class="badge-rating">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            4.8
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">App de Delivery</h3>
+          <div class="card-author">
+            <div class="avatar">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+            </div>
+            <span>João Silva</span>
+          </div>
+          <hr class="card-divider">
+          <div class="card-stats">
+            <div class="stats-left">
+              <span class="stat views"><svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>150k</span>
+              <span class="stat likes"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg>145k</span>
+            </div>
+            <button class="fav-btn" aria-label="Favoritar" onclick="toggleLike(this)">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Analytics -->
+      <div class="card">
+        <div class="card-banner b-dashboard">
+          <div class="badge-rating">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            4.9
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Dashboard Analytics</h3>
+          <div class="card-author">
+            <div class="avatar">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+            </div>
+            <span>Maria Santos</span>
+          </div>
+          <hr class="card-divider">
+          <div class="card-stats">
+            <div class="stats-left">
+              <span class="stat views"><svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>7k</span>
+              <span class="stat likes"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg>5.7k</span>
+            </div>
+            <button class="fav-btn" aria-label="Favoritar" onclick="toggleLike(this)">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- E-commerce -->
+      <div class="card">
+        <div class="card-banner b-ecommerce">
+          <div class="badge-rating">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            4.7
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">E-commerce</h3>
+          <div class="card-author">
+            <div class="avatar">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+            </div>
+            <span>Pedro Costa</span>
+          </div>
+          <hr class="card-divider">
+          <div class="card-stats">
+            <div class="stats-left">
+              <span class="stat views"><svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>4k</span>
+              <span class="stat likes"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg>2.9k</span>
+            </div>
+            <button class="fav-btn" aria-label="Favoritar" onclick="toggleLike(this)">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Financeiro -->
+      <div class="card">
+        <div class="card-banner b-financeiro">
+          <div class="badge-rating">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            5
+          </div>
+          <div class="badge-trending">
+            <svg viewBox="0 0 24 24">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg>
+            Em Alta
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">App Financeiro</h3>
+          <div class="card-author">
+            <div class="avatar">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+            </div>
+            <span>Ana Oliveira</span>
+          </div>
+          <hr class="card-divider">
+          <div class="card-stats">
+            <div class="stats-left">
+              <span class="stat views"><svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>300k</span>
+              <span class="stat likes"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg>205.2k</span>
+            </div>
+            <button class="fav-btn" aria-label="Favoritar" onclick="toggleLike(this)">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rede Social -->
+      <div class="card">
+        <div class="card-banner b-social">
+          <div class="badge-rating">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            4.6
+          </div>
+          <div class="badge-trending">
+            <svg viewBox="0 0 24 24">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg>
+            Em Alta
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Rede Social</h3>
+          <div class="card-author">
+            <div class="avatar">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+            </div>
+            <span>Carlos Mendes</span>
+          </div>
+          <hr class="card-divider">
+          <div class="card-stats">
+            <div class="stats-left">
+              <span class="stat views"><svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>209k</span>
+              <span class="stat likes"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg>200.2k</span>
+            </div>
+            <button class="fav-btn" aria-label="Favoritar" onclick="toggleLike(this)">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- App de Fitness -->
+      <div class="card">
+        <div class="card-banner b-fitness">
+          <div class="badge-rating">
+            <svg viewBox="0 0 24 24">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            4.8
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">App de Fitness</h3>
+          <div class="card-author">
+            <div class="avatar">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+            </div>
+            <span>Julia Rodrigues</span>
+          </div>
+          <hr class="card-divider">
+          <div class="card-stats">
+            <div class="stats-left">
+              <span class="stat views"><svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>10k</span>
+              <span class="stat likes"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg>6.8k</span>
+            </div>
+            <button class="fav-btn" aria-label="Favoritar" onclick="toggleLike(this)">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="load-more-wrap">
+      <button class="btn-outline">Carregar Mais Protótipos</button>
+    </div>
+
+    <script src="js/cliente.js"></script>
+
+    </header>
+
+</body>
+
+</html>

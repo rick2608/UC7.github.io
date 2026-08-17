@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos</title>
+    <link rel="stylesheet" href="css/Planos.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="cadastro.html" class="back-link">
+                <svg viewBox="0 0 24 24">
+                    <line x1="19" y1="12" x2="5" y2="12" />
+                    <polyline points="12 19 5 12 12 5" />
+                </svg>
+                Voltar
+            </a>
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                    </svg>
+                </div>
+                <span class="logo-text">DevFinder</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Planos para Desenvolvedores</h1>
+        <p>Escolha o plano ideal para seu negócio e comece a publicar seus protótipos hoje mesmo</p>
+    </section>
+
+    <main class="plans">
+
+        <!-- Mensal -->
+        <div class="plan-card">
+            <div class="plan-icon icon-blue">
+                <svg viewBox="0 0 24 24">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+            </div>
+            <h2 class="plan-name">Mensal</h2>
+            <div class="plan-price">
+                <span class="amount blue">R$ 60</span>
+                <span class="period">/mês</span>
+            </div>
+            <div class="plan-spacer"></div>
+            <ul class="features">
+                <li><span class="check check-blue"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Até 5 protótipos publicados</li>
+                <li><span class="check check-blue"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Dashboard básico</li>
+                <li><span class="check check-blue"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Suporte por email</li>
+                <li><span class="check check-blue"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Badge de desenvolvedor verificado</li>
+            </ul>
+            <a class="select-btn" href="pagamento.html" onclick="escolherPlano('Mensal', 'R$ 60' , '/1 mês')">Selecionar
+                Plano</a>
+        </div>
+
+        <!-- Trimestral -->
+        <div class="plan-card featured">
+            <div class="popular-badge">Mais Popular</div>
+            <div class="plan-icon icon-purple">
+                <svg viewBox="0 0 24 24">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+            </div>
+            <h2 class="plan-name">Trimestral</h2>
+            <div class="plan-price">
+                <span class="amount purple">R$ 170</span>
+                <span class="period">/3 meses</span>
+            </div>
+            <span class="save-badge">Economize 12%</span>
+            <ul class="features">
+                <li><span class="check check-purple"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Até 15 protótipos publicados</li>
+                <li><span class="check check-purple"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Dashboard completo</li>
+                <li><span class="check check-purple"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Suporte prioritário</li>
+                <li><span class="check check-purple"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Badge de desenvolvedor verificado</li>
+                <li><span class="check check-purple"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Destaque na busca</li>
+            </ul>
+            <a class="select-btn gradient" href="pagamento.html"
+                onclick="escolherPlano('Trimestral', 'R$ 170' , '/3 meses')">Selecionar
+                Plano</a>
+        </div>
+
+        <!-- Anual -->
+        <div class="plan-card">
+            <div class="plan-icon icon-pink">
+                <svg viewBox="0 0 24 24">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+            </div>
+            <h2 class="plan-name">Anual</h2>
+            <div class="plan-price">
+                <span class="amount pink">R$ 500</span>
+                <span class="period">/ano</span>
+            </div>
+            <span class="save-badge">Economize 24%</span>
+            <ul class="features">
+                <li><span class="check check-pink"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Protótipos ilimitados</li>
+                <li><span class="check check-pink"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Dashboard avançado com analytics</li>
+                <li><span class="check check-pink"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Suporte prioritário 24/7</li>
+                <li><span class="check check-pink"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Badge de desenvolvedor verificado</li>
+                <li><span class="check check-pink"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Destaque premium na busca</li>
+                <li><span class="check check-pink"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg></span>Logo personalizado no perfil</li>
+            </ul>
+            <a class="select-btn" href="pagamento.html"
+                onclick="escolherPlano('Anual', 'R$ 500' , '/12 meses')">Selecionar Plano</a>
+        </div>
+
+    </main>
+
+    <div class="footer-note">
+        <p>
+            <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Todos os planos incluem 7 dias de teste grátis
+        </p>
+        <p>
+            <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Cancele quando quiser, sem compromisso
+        </p>
+    </div>
+
+    <script src="js/planos.js"></script>
+
+</body>
+
+</html>
