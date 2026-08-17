@@ -1,51 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | DevFinder</title>
+
     <link rel="stylesheet" href="css/login.css">
+
 </head>
 
 <body>
 
-    <div class="esquerda">
+    <main class="auth-page">
 
-        <p><a href="index.html"> <- Voltar</a></p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <h3>Junte-se à nossa comunidade</h3>
-        <p>Milhares de desenvolvedores já estão publicando seus protótipos e crescendo conosco</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <p>&copy;2026 DevFinder. Todos os direitos reservados</p>
+        <section class="auth-left">
 
-    </div>
+            <a href="index.html" class="voltar">
+                ← Voltar para o início
+            </a>
 
-    <div class="direita">
 
-        <div class="cadastro">
+            <div class="left-content">
 
-            <h3>Login</h3>
-            <p>Email</p>
-            <input type="text">
-            <p>Senha</p>
-            <input type="password">
+                <div class="brand">
 
-            <p class="cor">
-                Esqueceu a senha?
+                    <div class="brand-icon">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                        </svg>
+
+                    </div>
+
+                    <span>DevFinder</span>
+
+                </div>
+
+
+                <h1>
+                    Bem-vindo de volta!
+                </h1>
+
+
+                <p>
+                    Acesse sua conta e continue conectando-se
+                    com desenvolvedores e clientes.
+                </p>
+
+
+                <div class="benefits">
+
+                    <div>
+                        <span class="benefit-icon">✓</span>
+                        Gerencie seus projetos
+                    </div>
+
+                    <div>
+                        <span class="benefit-icon">✓</span>
+                        Encontre novas oportunidades
+                    </div>
+
+                    <div>
+                        <span class="benefit-icon">✓</span>
+                        Acompanhe seu crescimento
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="copyright">
+                © 2026 DevFinder. Todos os direitos reservados.
             </p>
 
+        </section>
 
-            <button>Entrar na Conta</button>
 
-            <p>
-                Não tem conta?
-                <a href="cadastro.html">Cadastre-se</a>
-            </p>
+        <section class="auth-right">
 
-        </div>
+            <div class="form-card">
 
-    </div>
+                <div class="form-header">
+
+                    <div class="mobile-logo">
+
+                        <div class="brand-icon">
+
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                            </svg>
+
+                        </div>
+
+                        <span>DevFinder</span>
+
+                    </div>
+
+
+                    <h2>
+                        Entrar na Conta
+                    </h2>
+
+                    <p>
+                        Acesse sua conta DevFinder
+                    </p>
+
+                </div>
+
+
+                <form id="loginForm">
+
+                    <div class="campo">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="seu@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <small
+                            class="erro"
+                            id="erroEmail"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <div class="label-row">
+
+                            <label for="senha">
+                                Senha
+                            </label>
+
+                            <a
+                                href="#"
+                                id="esqueceuSenha"
+                                class="esqueceu"
+                            >
+                                Esqueceu a senha?
+                            </a>
+
+                        </div>
+
+
+                        <div class="senha-container">
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Digite sua senha"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="mostrarSenha"
+                                class="mostrar-senha"
+                            >
+                                Mostrar
+                            </button>
+
+                        </div>
+
+                        <small
+                            class="erro"
+                            id="erroSenha"
+                        ></small>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-entrar"
+                        id="btnEntrar"
+                    >
+                        Entrar na Conta
+                    </button>
+
+                </form>
+
+
+                <p class="cadastro-text">
+
+                    Não tem uma conta?
+
+                    <a href="cadastro.html">
+                        Cadastre-se
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/login.js"></script>
 
 </body>
 
