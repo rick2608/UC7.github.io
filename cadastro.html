@@ -1,70 +1,308 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+
+    <title>Cadastro | DevFinder</title>
+
     <link rel="stylesheet" href="css/cadastro.css">
 </head>
 
 <body>
 
-    <div class="esquerda">
+    <main class="auth-page">
 
-        <p><a href="index.html"> <- Voltar</a></p>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <h3>Junte-se à nossa comunidade</h3>
-                <p>Milhares de desenvolvedores já estão publicando seus protótipos e crescendo conosco</p>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <p>&copy;2026 DevFinder. Todos os direitos reservados</p>
+        <section class="auth-left">
 
-    </div>
+            <a href="index.html" class="voltar">
+                ← Voltar para o início
+            </a>
 
-    <div class="direita">
+            <div class="left-content">
 
-        <div class="cadastro">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                        </svg>
+                    </div>
 
-            <h3>Criar Conta</h3>
-            <p>Comece gratuitamente hoje</p>
-            <p>Nome Completo</p>
-            <input type="text">
-            <p>Email</p>
-            <input type="text">
-            <p>Senha</p>
-            <input type="password">
+                    <span>DevFinder</span>
+                </div>
 
-            <p>Tipo de conta</p>
+                <h1>Junte-se à nossa comunidade</h1>
 
-            <label class="botao-bolinha">
-                <input type="checkbox" id="check1" onchange="abrirPagina()">
-                <span class="bolinha"></span>
-                <span>👤 Cliente</span>
-            </label>
+                <p>
+                    Crie sua conta gratuitamente e conecte-se
+                    com desenvolvedores e clientes.
+                </p>
 
-            <br>
+                <div class="benefits">
 
-            <label class="botao-bolinha">
-                <input type="checkbox" id="check2" onchange="abrirPagina()">
-                <span class="bolinha"></span>
-                <span>❮❯ Desenvolvedor</span>
-            </label>
+                    <div>
+                        <span class="benefit-icon">✓</span>
+                        Publique seus protótipos
+                    </div>
 
-            <br>
+                    <div>
+                        <span class="benefit-icon">✓</span>
+                        Encontre novos clientes
+                    </div>
 
-            <button id="btnContinuar" onclick="irParaPagina()">Criar Conta Grátis</button>
+                    <div>
+                        <span class="benefit-icon">✓</span>
+                        Expanda seus negócios
+                    </div>
 
-            <p>
-                Já tem conta?
-                <a href="login.html">Faça Login</a>
+                </div>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 DevFinder. Todos os direitos reservados.
             </p>
 
-        </div>
+        </section>
 
-    </div>
+
+        <section class="auth-right">
+
+            <div class="form-card">
+
+                <div class="form-header">
+
+                    <div class="mobile-logo">
+
+                        <div class="brand-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                            </svg>
+                        </div>
+
+                        <span>DevFinder</span>
+
+                    </div>
+
+                    <h2>Criar Conta</h2>
+
+                    <p>
+                        Comece gratuitamente hoje
+                    </p>
+
+                </div>
+
+
+                <form id="cadastroForm">
+
+                    <div class="campo">
+
+                        <label for="nome">
+                            Nome Completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Digite seu nome completo"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <small class="erro" id="erroNome"></small>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="seu@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <small class="erro" id="erroEmail"></small>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="senha-container">
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Crie uma senha"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="mostrarSenha"
+                                class="mostrar-senha"
+                            >
+                                Mostrar
+                            </button>
+
+                        </div>
+
+                        <div class="senha-forca">
+
+                            <div class="forca-barra">
+                                <span id="barraForca"></span>
+                            </div>
+
+                            <small id="textoForca">
+                                Mínimo de 6 caracteres
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="confirmarSenha">
+                            Confirmar Senha
+                        </label>
+
+                        <div class="senha-container">
+
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                placeholder="Digite a senha novamente"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="mostrarConfirmacao"
+                                class="mostrar-senha"
+                            >
+                                Mostrar
+                            </button>
+
+                        </div>
+
+                        <small class="erro" id="erroSenha"></small>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label>
+                            Tipo de conta
+                        </label>
+
+                        <div class="tipos-conta">
+
+                            <label class="tipo-option">
+
+                                <input
+                                    type="radio"
+                                    name="tipoConta"
+                                    value="cliente"
+                                    required
+                                >
+
+                                <div class="tipo-card">
+
+                                    <div class="tipo-icon">
+                                        👤
+                                    </div>
+
+                                    <div>
+                                        <strong>Cliente</strong>
+                                        <small>
+                                            Encontre desenvolvedores
+                                        </small>
+                                    </div>
+
+                                    <span class="radio"></span>
+
+                                </div>
+
+                            </label>
+
+
+                            <label class="tipo-option">
+
+                                <input
+                                    type="radio"
+                                    name="tipoConta"
+                                    value="desenvolvedor"
+                                >
+
+                                <div class="tipo-card">
+
+                                    <div class="tipo-icon">
+                                        &lt;/&gt;
+                                    </div>
+
+                                    <div>
+                                        <strong>Desenvolvedor</strong>
+                                        <small>
+                                            Publique seus projetos
+                                        </small>
+                                    </div>
+
+                                    <span class="radio"></span>
+
+                                </div>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-cadastrar"
+                        id="btnCadastrar"
+                    >
+                        Criar Conta Grátis
+                    </button>
+
+                </form>
+
+
+                <p class="login-text">
+                    Já tem uma conta?
+
+                    <a href="login.html">
+                        Faça Login
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/cadastro.js"></script>
 
 </body>
-
-<script src="js/cadastro.js"></script>
 
 </html>
