@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BlueFood</title>
+
+    <link rel="stylesheet" href="css/ver_prototipo.css">
+</head>
+
+<body>
+
+    <div class="phone">
+
+        <div class="app">
+
+            <!-- ================= INÍCIO ================= -->
+
+            <div class="page active" id="home">
+
+                <div class="header">
+
+                    <small>Entregar em</small>
+
+                    <h2>Rua das Flores, 42</h2>
+
+                    <div class="search">
+                        <span>🔍</span>
+
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="Buscar restaurantes..."
+                        >
+                    </div>
+
+                </div>
+
+                <div class="content">
+
+                    <h3 class="section-title">
+                        Categorias
+                    </h3>
+
+                    <div class="categories">
+
+                        <div class="category">
+                            <div class="category-icon">
+                                🍔
+                            </div>
+
+                            <p>Lanches</p>
+                        </div>
+
+                        <div class="category">
+                            <div class="category-icon">
+                                🍕
+                            </div>
+
+                            <p>Pizza</p>
+                        </div>
+
+                        <div class="category">
+                            <div class="category-icon">
+                                🥗
+                            </div>
+
+                            <p>Saudável</p>
+                        </div>
+
+                        <div class="category">
+                            <div class="category-icon">
+                                🍣
+                            </div>
+
+                            <p>Japonesa</p>
+                        </div>
+
+                    </div>
+
+                    <h3 class="section-title">
+                        Mais pedidos
+                    </h3>
+
+                    <div
+                        class="restaurant"
+                        onclick="showPage('product')"
+                    >
+
+                        <div class="restaurant-img">
+                            🍔
+                        </div>
+
+                        <div class="restaurant-info">
+
+                            <h3>Burger House</h3>
+
+                            <p>
+                                ★ 4.8 • 20-30 min
+                            </p>
+
+                        </div>
+
+                        <span>
+                            Popular
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="restaurant"
+                        onclick="showPage('product')"
+                    >
+
+                        <div class="restaurant-img">
+                            🍕
+                        </div>
+
+                        <div class="restaurant-info">
+
+                            <h3>Pizza Top</h3>
+
+                            <p>
+                                ★ 4.7 • 25-35 min
+                            </p>
+
+                        </div>
+
+                        <span>
+                            Novo
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PRODUTO ================= -->
+
+            <div class="page" id="product">
+
+                <div class="content">
+
+                    <button
+                        class="back"
+                        onclick="showPage('home')"
+                    >
+                        ‹
+                    </button>
+
+                    <div class="product-img">
+                        🍔
+                    </div>
+
+                    <h2>
+                        Smash Burger Especial
+                    </h2>
+
+                    <p class="description">
+                        Dois smash de 120g, cheddar,
+                        cebola caramelizada e molho especial.
+                    </p>
+
+                    <div
+                        class="price"
+                        id="price"
+                    >
+                        R$ 34,90
+                    </div>
+
+                    <div class="quantity">
+
+                        <button
+                            onclick="changeQty(-1)"
+                        >
+                            −
+                        </button>
+
+                        <span id="qty">
+                            1
+                        </span>
+
+                        <button
+                            onclick="changeQty(1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                    <div class="option">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                data-price="5"
+                            >
+
+                            Bacon extra
+                        </label>
+
+                        <span>
+                            +R$ 5,00
+                        </span>
+
+                    </div>
+
+                    <div class="option">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                data-price="3"
+                            >
+
+                            Batata frita
+                        </label>
+
+                        <span>
+                            +R$ 3,00
+                        </span>
+
+                    </div>
+
+                    <div class="option">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                data-price="7"
+                            >
+
+                            Refrigerante
+                        </label>
+
+                        <span>
+                            +R$ 7,00
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="add"
+                        onclick="finishOrder()"
+                    >
+                        🛒 Adicionar ao pedido
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RASTREAMENTO ================= -->
+
+            <div class="page" id="tracking">
+
+                <div class="content">
+
+                    <h2>
+                        Rastreando pedido
+                    </h2>
+
+                    <div class="map">
+
+                        <div class="route"></div>
+
+                        <div class="map-point start"></div>
+
+                        <div class="map-point end"></div>
+
+                        <div class="car">
+                            🚗
+                        </div>
+
+                    </div>
+
+                    <div class="time">
+
+                        <h2>
+                            12 minutos
+                        </h2>
+
+                        <p>
+                            Tempo estimado de chegada
+                        </p>
+
+                    </div>
+
+                    <div class="step">
+
+                        <strong>
+                            Pedido confirmado
+                        </strong>
+
+                        <p>
+                            09:20
+                        </p>
+
+                    </div>
+
+                    <div class="step">
+
+                        <strong>
+                            Preparando seu pedido
+                        </strong>
+
+                        <p>
+                            09:25
+                        </p>
+
+                    </div>
+
+                    <div class="step">
+
+                        <strong>
+                            A caminho
+                        </strong>
+
+                        <p>
+                            Agora
+                        </p>
+
+                    </div>
+
+                    <div class="step">
+
+                        <strong>
+                            Entregue
+                        </strong>
+
+                        <p>
+                            Previsão 09:53
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MENU ================= -->
+
+            <nav class="nav">
+
+                <button
+                    class="active"
+                    onclick="showPage('home')"
+                >
+                    <span>⌂</span>
+                    <small>Início</small>
+                </button>
+
+                <button
+                    onclick="showPage('product')"
+                >
+                    <span>🍔</span>
+                    <small>Produto</small>
+                </button>
+
+                <button
+                    onclick="showPage('tracking')"
+                >
+                    <span>🚗</span>
+                    <small>Rastrear</small>
+                </button>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/ver_prototipo.js"></script>
+
+</body>
+
+</html>
